@@ -1,4 +1,4 @@
-.env
 aclImdb
 .idea
 __pycache__
+.env
