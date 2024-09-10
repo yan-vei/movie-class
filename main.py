@@ -14,7 +14,7 @@ tokenizer = BertTokenizer.from_pretrained(config.TOKENIZER)
 train_dataloader = create_dataloader(config.POS_DIR_TRAIN, config.NEG_DIR_TRAIN, tokenizer,
                                      config.MAX_LENGTH, config.PADDING_TOKEN, config.BATCH_SIZE)
 test_dataloader = create_dataloader(config.POS_DIR_TEST, config.NEG_DIR_TEST, tokenizer,
-                                    config.MAX_LENGTH, config.PADDING_TOKEN, config.BATCH_SIZ)
+                                    config.MAX_LENGTH, config.PADDING_TOKEN, config.BATCH_SIZE)
 
 # Load model
 model = BertClassifier(device, config.NUM_CLASSES).to(device)
