@@ -17,7 +17,7 @@ test_dataloader = create_dataloader(config.POS_DIR_TEST, config.NEG_DIR_TEST, to
                                     config.MAX_LENGTH, config.PADDING_TOKEN, config.BATCH_SIZE)
 
 # Load model
-model = BertClassifier(device, config.NUM_CLASSES).to(device)
+model = BertClassifier(device, config.NUM_CLASSES, freeze_params=True).to(device)
 
 # Define loss function and optimizer
 loss_func = nn.CrossEntropyLoss()
